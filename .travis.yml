@@ -5,5 +5,7 @@ script:
     - cd Debug
     - make clean
     - make
-    - valgrind --log-fd=1 ./Base | grep "ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 1)"
+    - valgrind --log-fd=1 ./Base 
+    - valgrind --log-file=leak.out ./Base 
+    - grep "All heap blocks were freed" leak.out
 
