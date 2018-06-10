@@ -1,5 +1,9 @@
 language: c
+before_install:
+    - sudo apt-get install -y valgrind
 script:
     - cd Debug
     - make clean
     - make
+    - valgrind --log-fd=1 ./Base | grep "ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 1)"
+
