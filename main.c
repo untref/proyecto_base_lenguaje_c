@@ -13,6 +13,8 @@ int main(int argc, char** argv) {
 
 	mitda_init(&t);
 
+    malloc(5);
+
     return 0;
 }
 
