@@ -12,5 +12,7 @@ int main(int argc, char** argv) {
 	MiTda t;
 
 	mitda_init(&t);
+
+    return 0;
 }
 
